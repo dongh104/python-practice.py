@@ -1,0 +1,47 @@
+import random
+
+def addProblem(x,y):
+    add = x + y
+    sentence = "정수" +str(x) + "+" + str(y) +"의 결과는?"
+    return add,int(input(sentence))
+def subProblem(x,y):
+    sub = x - y
+    sentence = "정수" +str(x) + "-" + str(y) +"의 결과는?"
+    return sub,int(input(sentence))
+def mulProblem(x,y):
+    mul = x * y
+    sentence = "정수" +str(x) + "*" + str(y) +"의 결과는?"
+    return mul,int(input(sentence))
+def divProblem(x,y):
+    div = x / y
+    sentence = "정수" +str(x) + "/" + str(y) +"의 결과는?"
+    return div,int(input(sentence))
+
+symbol = random.choice(["+","-","*","/"])
+print(symbol)
+
+def getValue():
+    a = int(input("첫 번째 정수"))
+    b = int(input("두 번째 정수"))
+    sum, answer = sumProblem(a,b)
+    if sum == answer:
+        return True
+    else:
+        return False
+
+
+print("2개 정수의 합을 맞추는 게임, 3번 맞추면 끝남\n")
+count = 0
+
+while True:
+    if getValue() == True:
+        print("맞았어요 짝짝\n")
+        count+= 1
+    else:
+        print("다시 해봐요\n")
+
+
+    if count == 3:
+        break
+
+print("3번 맞춰서 프로그램 끝나요")
