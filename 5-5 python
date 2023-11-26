@@ -1,0 +1,11 @@
+import random
+a = random.randint(1,100)
+b = random.randint(1,100)
+
+num = int(input(str(a) + "-" + str(b) + "="))
+
+
+if (num == a-b):
+   print("맞았습니다.")
+else:
+   print("틀렸습니다.")
